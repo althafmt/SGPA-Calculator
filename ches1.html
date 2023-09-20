@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            padding: 150px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        select {
+            width: 100%;
+            padding: 5px;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        #result {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CGPA Calculator</h1>
+        <h2><center>CHE S1</center></h2>
+        <form id="cgpa-form">
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Communication Skills in English</td>
+                    <td>
+                        <select id="subject1">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mathematics I</td>
+                    <td>
+                        <select id="subject2">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Applied Physics I</td>
+                    <td>
+                        <select id="subject3">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Applied Chemistry</td>
+                    <td>
+                        <select id="subject4">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Engineering Graphics</td>
+                    <td>
+                        <select id="subject5">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Applied Physics Lab</td>
+                    <td>
+                        <select id="subject6">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Applied Chemistry Lab</td>
+                    <td>
+                        <select id="subject7">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Introduction to IT systems Lab</td>
+                    <td>
+                        <select id="subject8">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Engineering Workshop Practice</td>
+                    <td>
+                        <select id="subject9">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sports and Yoga</td>
+                    <td>
+                        <select id="subject10">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <button type="button" onclick="calculateCGPA()">Calculate CGPA</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateCGPA() {
+            const gradeValues = [];
+            const creditPoints = [4, 5, 3, 3, 1.5, 0, 1, 2, 0, 1];
+
+            // Get selected grades for each subject and convert them to numerical values
+            for (let i = 1; i <= 10; i++) {
+                const gradeSelect = document.getElementById(`subject${i}`);
+                const gradeValue = parseFloat(gradeSelect.value);
+                gradeValues.push(gradeValue);
+            }
+
+            // Calculate SGPA for each subject
+            const sgpaValues = gradeValues.map((grade, index) => grade * creditPoints[index]);
+
+            // Calculate CGPA
+            const totalSubjectCreditPoints = creditPoints.reduce((a, b) => a + b, 0);
+            const totalSGPA = sgpaValues.reduce((a, b) => a + b, 0);
+            const cgpa = (totalSGPA / totalSubjectCreditPoints).toFixed(2);
+
+            // Display the result
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `<p>Your CGPA is: ${cgpa}</p>`;
+        }
+    </script>
+</body>
+</html>
